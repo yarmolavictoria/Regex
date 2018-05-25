@@ -11,7 +11,7 @@ public class Regex {
 
     public static void main(String[] args) throws IOException {
 
-        String p = " (\\[Login Username:.*?\\])|(\\[Data Object:.*?\\])|(\\[User Action:.*?\\])|(\\[Records:.*?\\])|(\\[User Action Status:.*?\\])|(\\[Labels:.*?\\])|(\\[Service type:.*?\\])|(\\[Mapping Ids:.*?\\])";
+        String p = "([a-zA-z ]+ [0-9 :]+)|(\\[Login Username:.*?\\])|(\\[Data Object:.*?\\])|(\\[User Action:.*?\\])|(\\[Records:.*?\\])|(\\[User Action Status:.*?\\])|(\\[Labels:.*?\\])|(\\[Service type:.*?\\])|(\\[Mapping Ids:.*?\\])";
         Pattern patern = Pattern.compile(p);
 
         List<String> lines = readAllLines(Paths.get("C:/Users/Vika/Desktop/logs2/Logs.txt"));
